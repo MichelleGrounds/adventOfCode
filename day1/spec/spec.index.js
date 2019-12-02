@@ -1,9 +1,5 @@
 const { expect } = require("chai");
-const {
-  fuelCalculator,
-  fuelCalculatorIncludingFuel,
-  checkArrayMass
-} = require("../index");
+const { fuelCalculator, checkArrayMass } = require("../index");
 const massData = require("../data");
 
 describe("fuelCalculator", () => {
