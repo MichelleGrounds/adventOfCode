@@ -1,6 +1,6 @@
 const { expect } = require("chai");
-const opCode = require("../index");
-const codeData = require("../data");
+const { opCode, nounAndVerbChecker } = require("../index");
+const { data, ogData } = require("../data");
 
 describe("opCode", () => {
   it("given an empty array returns 0", () => {
@@ -49,9 +49,17 @@ describe("opCode", () => {
     opCode(input);
     expect(input).to.eql([30, 1, 1, 4, 2, 5, 6, 0, 99]);
   });
-  it("given the whole code array, mutate the array and return the 0th index", () => {
-    const actual = opCode(codeData.data);
+  it("given the whole code array, mutate the array and return the 0th index 4138658", () => {
+    const actual = opCode(data);
     const expected = 4138658;
     expect(actual).to.eql(expected);
+  });
+});
+
+describe("nounAndVerbChecker", () => {
+  it("get correvt value", () => {
+    const actual = nounAndVerbChecker(ogData);
+    const expected = 7264;
+    expect(actual).to.equal(expected);
   });
 });
