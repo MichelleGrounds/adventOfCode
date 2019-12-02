@@ -1,0 +1,25 @@
+{
+  "name": "adventOfCode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.2.2"
+  },
+  "scripts": {
+    "test": "mocha ./day2/spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MichelleGrounds/adventOfCode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MichelleGrounds/adventOfCode/issues"
+  },
+  "homepage": "https://github.com/MichelleGrounds/adventOfCode#readme"
+}
