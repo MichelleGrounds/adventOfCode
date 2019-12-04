@@ -27,13 +27,25 @@ describe("passwordChecker", () => {
     const actual = passwordChecker(input);
     expect(actual).to.equal(false);
   });
-  // describe("arrayAssembler", () => {
-  //   it("part 1: returns how many possible passwords are in the range", () => {
-  //     const input1 = 307237;
-  //     const input2 = 769059;
-  //     const actual = arrayAssembler(input1, input2);
-  //     const expected = 889;
-  //     expect(actual).to.equal(expected);
-  //   });
-  // });
+  it("Part2: the two adjacent matching digits are not part of a larger group of matching digits.", () => {
+    const input = 333445;
+    const actual = passwordChecker(input);
+    expect(actual).to.equal(true);
+  });
+  describe("arrayAssembler", () => {
+    //   it("part 1: returns how many possible passwords are in the range", () => {
+    //     const input1 = 307237;
+    //     const input2 = 769059;
+    //     const actual = arrayAssembler(input1, input2);
+    //     const expected = 889;
+    //     expect(actual).to.equal(expected);
+    //   });
+    it("part 2: returns how many possible passwords are in the range", () => {
+      const input1 = 307237;
+      const input2 = 769059;
+      const actual = arrayAssembler(input1, input2);
+      const expected = 589;
+      expect(actual).to.equal(expected);
+    });
+  });
 });

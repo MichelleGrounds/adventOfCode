@@ -17,7 +17,7 @@
 
 const passwordChecker = number => {
   const regExDigits = /^((?=\d{6}$)1*2*3*4*5*6*7*8*9*$)/;
-  const regExRepeats = /(.)\1{2}/;
+  const regExRepeats = /^((\d)\2(?!\2)\d*|\d*(\d)(?!\3)(\d)\4(?!\4)\d*)$/;
   let bool = false;
   if (number > 307236 && number < 769059) {
     bool = regExDigits.test(number) && regExRepeats.test(number);
@@ -34,4 +34,5 @@ const arrayAssembler = (from, to) => {
   }
   return resultArray.length;
 };
+
 module.exports = { passwordChecker, arrayAssembler };
