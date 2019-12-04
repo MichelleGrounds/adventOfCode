@@ -57,7 +57,7 @@ describe("opCode", () => {
 });
 
 describe("nounAndVerbChecker", () => {
-  it("get correvt value", () => {
+  it("get correct value", () => {
     const actual = nounAndVerbChecker(ogData);
     const expected = 7264;
     expect(actual).to.equal(expected);
